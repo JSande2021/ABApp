@@ -16,72 +16,69 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ContactRepository extends MongoRepository<Contact, Integer> {
 
+	/**
+	 * @param keyword
+	 * @return contacts with keyword if found
+	 */
 	@Query("{$or:[{'fname' : ?0},{lname:?0}]}")
 	public List<Contact> findByName(String keyword);
 	
 	/**
 	 * @param contact
-	 * @return
+	 * @return contacts with first name if found
 	 */
 	//@Query("SELECT s FROM Contact s WHERE s.fname =?1")
 	@Query("{'fname' : ?0}")
 	Optional<Contact> findContactByfname(String fname);
 	
-	/**
-	 * @param contact
-	 * @return
-	 */
-	@Query("{'id': ?0}")
-	//@Query("SELECT s FROM Contact s WHERE s.ID = ?1")
-	Optional<Contact> findContactByID(int ID);
 
 	/**
 	 * @param contact
-	 * @return
+	 * @return contacts with last name if found
 	 */
 	@Query("SELECT s FROM Contact s WHERE s.lname = ?1")
 	Optional<Contact> findContactBylname(String lname);
 
 	/**
 	 * @param contact
-	 * @return
+	 * @return contacts with phone number if found
 	 */
 	@Query("SELECT s FROM Contact s WHERE s.phoneNumber = ?1")
 	Optional<Contact> findContactByPhonNumber(String phoneNumber);
 
 	/**
 	 * @param contact
-	 * @return
+	 * @return contacts with email if found
 	 */
 	@Query("SELECT s FROM Contact s WHERE s.email = ?1")
 	Optional<Contact> findContactByEmail(String email);
 
 	/**
 	 * @param contact
-	 * @return
+	 * @return contacts with street name if found
 	 */
 	@Query("SELECT s FROM Contact s WHERE s.streetName = ?1")
 	Optional<Contact> findContactByStreetName(String streetName);
 
 	/**
 	 * @param contact
-	 * @return
+	 * @return all contacts in the list
 	 */
 	List<Contact> findAll(Sort sort);
 
 	/**
 	 * @param contact
-	 * @return
+	 * @return contact if found by id
 	 */
 	Contact findById(String iD);
 
 	/**
 	 * @param contact
-	 * @return
+	 * @return true or false if contact exists
 	 */
 	boolean existsById(String iD);
 
-	/**
+	/**finds contact to delete by id so returns nothing when completed
 	 * @param contact
 	 */
 	void deleteById(String id);
