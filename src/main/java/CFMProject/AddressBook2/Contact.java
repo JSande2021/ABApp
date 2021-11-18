@@ -70,15 +70,15 @@ public class Contact {
 	 */
 	public Contact() {
 		this.id = null;
-		this.fname = "Bear";
-		this.lname = "Sande";
-		this.phoneNumber = "555-555-5555";
-		this.email = "BSande@gmail.com";
-		this.streetname = "123 Oak Street";
-		this.city = "Phoenix";
-		this.state = "Arizona";
-		this.postalcode = "66062";
-		this.country = "United States";
+		this.fname = "";
+		this.lname = "";
+		this.phoneNumber = "";
+		this.email = "";
+		this.streetname = "";
+		this.city = "";
+		this.state = "";
+		this.postalcode = "";
+		this.country = "";
 	}
 
 	// toString method to display contacts to user
