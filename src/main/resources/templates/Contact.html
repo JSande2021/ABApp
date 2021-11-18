@@ -66,23 +66,23 @@
 			<tbody>
 				<tr th:each="Contact: ${Contact}">
 
-					<td>
+					<td class="overflow">
 						<form action="#" th:action="@{/edit/{id}(id=${Contact.id})}"
 							th:method="get">
 							<input type="hidden" name="_method" value="edit" />
 							<button type="submit" id="submitButton" class="glow-on-hover">Edit</button>
 						</form>
 					</td>
-					<td>
+					<td class="overflow">
 						<form action="#" th:action="@{/details/{id}(id=${Contact.id})}"
 							th:method="get">
 							<input type="hidden" name="_method" value="details" />
 							<button type="submit" id="submitButton" class="glow-on-hover">Details</button>
 						</form>
 					</td>
-					<td th:text="${Contact.fname}">fname</td>
-					<td th:text="${Contact.lname}">lname</td>
-					<td>
+					<td th:text="${Contact.fname}" class="overflow">fname</td>
+					<td th:text="${Contact.lname}" class="overflow">lname</td>
+					<td class="overflow">
 						<form action="#" th:action="@{/{id}(id=${Contact.id})}"
 							th:method="post">
 							<input type="hidden" name="_method" value="delete" />
