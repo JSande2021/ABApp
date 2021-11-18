@@ -14,8 +14,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-//Session session = new Session(); ADD THIS INTO THE PROGRAM
-
 //http://localhost:27016/api/v1/Contact
 /**
  * @author Joeseph Sande
