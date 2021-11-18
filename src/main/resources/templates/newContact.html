@@ -28,21 +28,21 @@
 		<form action="#" th:action="@{/Contact/saveContact}"
 			th:object="${Contact}" method="POST">
 
-			<input type="text" th:field="*{fname}" placeholder="First Name"
-				class="form-control mb-4"> <input type="text"
-				th:field="*{lname}" placeholder="Last Name"
-				class="form-control mb-4"> <input type="text"
+			<input required type="text" th:field="*{fname}"
+				placeholder="First Name" class="form-control mb-4"> <input
+				required type="text" th:field="*{lname}" placeholder="Last Name"
+				class="form-control mb-4"> <input required type="text"
 				th:field="*{phoneNumber}" placeholder="Phone Number"
-				class="form-control mb-4"> <input type="text"
+				class="form-control mb-4"> <input required type="text"
 				th:field="*{email}" placeholder="Email" class="form-control mb-4">
-			<input type="text" th:field="*{streetname}" placeholder="Street Name"
-				class="form-control mb-4"> <input type="text"
-				th:field="*{city}" placeholder="City" class="form-control mb-4">
-			<input type="text" th:field="*{state}" placeholder="State"
-				class="form-control mb-4"> <input type="text"
-				th:field="*{postalcode}" placeholder="Postal Code"
-				class="form-control mb-4"> <input type="text"
-				th:field="*{country}" placeholder="Country"
+			<input required type="text" th:field="*{streetname}"
+				placeholder="Street Name" class="form-control mb-4"> <input
+				required type="text" th:field="*{city}" placeholder="City"
+				class="form-control mb-4"> <input required type="text"
+				th:field="*{state}" placeholder="State" class="form-control mb-4">
+			<input required type="text" th:field="*{postalcode}"
+				placeholder="Postal Code" class="form-control mb-4"> <input
+				required type="text" th:field="*{country}" placeholder="Country"
 				class="form-control mb-4">
 			<button type="submit" class="glow-on-hover">Save</button>
 		</form>
