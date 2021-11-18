@@ -47,11 +47,14 @@ get back to the main screen. Please keep in mind that all of the fields are requ
 ![UpdateContactForm](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/ContactUpdate.png)
 
 - To search contacts, please enter a first or last name that you would like to search for and press
-the search button to receive the results.  
+the search button to receive the results. 
+
 ![Search](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/searchButton.png)
 
 - The back button on any of the features pages will take you back to the home page.
+
 ![Back](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/UpdateContactWBackButton.png)
 
 - To log out of the application, click the logout button on the main page.
+
 ![Logout](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/logoutButton.png)
