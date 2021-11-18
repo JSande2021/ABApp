@@ -7,7 +7,9 @@
 <hr>
 
 - The first step to getting this application running on your system is to first import the project
-into eclipse or your favorite IDE.
+into eclipse or your favorite IDE. This can be easily done by downloading the GitHub Desktop Application and cloning the repository after you have been granted access to the repository with the following link: https://github.com/JSande2021/AddressBook2
+![image](https://user-images.githubusercontent.com/77128558/142467518-621ec6fb-c8e1-458d-a1ad-f2267a85d92a.png)
+
 
 - To run this application you will need to go to the AddressBook2Application.java file and 
 click the run button at the top of the screen. (This application contains a spring boot framework,
