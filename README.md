@@ -9,6 +9,8 @@
 **Setting up the IDE for the Application**
 - The first step to getting this application running on your system is to first import the project
 into eclipse or your favorite IDE. This can be easily done by downloading the GitHub Desktop Application and cloning the repository after you have been granted access to the repository with the following link: https://github.com/JSande2021/AddressBook2
+![Eclipse](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/EclipseLogo.png)
+![GitHub](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/GitHubDesktopCloneRepo.png)
 
 - Once you have the GitHub Desktop Application downloaded and you're signed in, you can clone a repository with the previous link and them open this prroject through your favorite IDE. The one utilized to create the project was Eclipse, so this one will be preferred to avoid any unnecessary issues with opening and running the application.
 
@@ -25,10 +27,16 @@ contacts on the main screen- Username: admin  Password: admin
 - To add a contact, please click the Add Contact button and follow the 
 prompts on the next screen to fill out a new contact form or press the go back button to 
 get back to the main screen. Please keep in mind that all of the fields are required to have content in order to create a new contact.
+![AddContactButton](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/AddButton.png)
+![AddContactForm](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/ContactCreation.png)
 
 - To delete a contact, please click the Delete Contact button in the row of the contact that you would like to delete or press the go back button to get back to the main screen.
+![Delete](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/DeleteButton.png)
 
 - To update a contact, please click the Update Contact button that is located in the row of the contact that you would like to update. Follow the prompts on the next screen to fill out the update contact form or press the go back button to get back to the main screen to cancel the update. Please keep in mind that all of the fields are required to have content in order to update a contact.
+![UpdateButton](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/EditButton.png)
+![UpdateContactForm](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/ContactUpdate.png)
 
 - To search contacts, please enter a first or last name that you would like to search for and press
 the search button to receive the results.  
+![Search](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/searchButton.png)
