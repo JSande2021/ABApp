@@ -26,7 +26,7 @@ public class ContactService {
 	}
 	
 	/**
-	 * @return
+	 * @return all contacts in the repository
 	 */
 	public List<Contact> findAll() {
 		return repository.findAll();
@@ -35,12 +35,10 @@ public class ContactService {
 	
 	//add a new Contact to the list
 	/**
-	 * @param contact
+	 * @param contact is added to the repository
 	 */
 	public void add(Contact contact) {
-		if(contact.fname.length() < 15 && contact.lname.length() < 15 ) {
 		repository.save(contact);
-		}
 	}
 	
 	//Delete a Contact from the list
@@ -58,8 +56,8 @@ public class ContactService {
 	}
 
 	/**
-	 * @param id
-	 * @return
+	 * @param id to find the contact by their id regarding update, delete and details buttons
+	 * @return contact if found, otherwise return nothing
 	 */
 	public Contact findById(String id) {
 		if(repository.existsById(id))
@@ -69,14 +67,6 @@ public class ContactService {
 		return null;
 	}
 
-	/**
-	 * @param id to find the contact by their id regarding update, delete and details buttons
-	 */
-	public void getContactById(String id) {
-		repository.findById(id);
-	}
-	
-	
 	/** Save the contact after updates were made
 	 * @param contact
 	 * @throws AttributeNotFoundException
