@@ -106,8 +106,8 @@ public class ContactController {
 
 	// SAVE CONTACTS
 	/**
-	 * @param contact
-	 * @param model
+	 * @param contact create a new contact object/document
+	 * @param model taking the information input to create a new object/document in MongoDB
 	 * @return Contact page
 	 */
 	@PostMapping("/saveContact")
