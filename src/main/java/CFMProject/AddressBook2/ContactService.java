@@ -32,14 +32,6 @@ public class ContactService {
 		return repository.findAll();
 	}
 	
-	/**
-	 * @param contact
-	 */
-	public void savecontact(Contact contact) {
-		if(contact.fname.length() < 15 && contact.lname.length() < 15 ) {
-			repository.save(contact);
-		}
-	}
 	
 	//add a new Contact to the list
 	/**
