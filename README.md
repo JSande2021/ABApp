@@ -6,10 +6,10 @@
 
 <hr>
 
--The first step to getting this application running on your system is to first import the project
+- The first step to getting this application running on your system is to first import the project
 into eclipse or your favorite IDE. You will need the web application tools plug in for eclipse.
 
--To run this application you will need to go to the AddressBook2Application.java file and 
+- To run this application you will need to go to the AddressBook2Application.java file and 
 click the run button at the top of the screen. (This application contains a spring boot framework,
 so please ensure your IDE can process this type of application.)
 
