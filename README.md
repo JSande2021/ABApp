@@ -9,7 +9,6 @@
 **Setting up the IDE for the Application**
 - The first step to getting this application running on your system is to first import the project
 into eclipse or your favorite IDE. This can be easily done by downloading the GitHub Desktop Application and cloning the repository after you have been granted access to the repository with the following link: https://github.com/JSande2021/AddressBook2
-![image](https://user-images.githubusercontent.com/77128558/142467518-621ec6fb-c8e1-458d-a1ad-f2267a85d92a.png)
 
 - Once you have the GitHub Desktop Application downloaded and you're signed in, you can clone a repository with the previous link and them open this prroject through your favorite IDE. The one utilized to create the project was Eclipse, so this one will be preferred to avoid any unnecessary issues with opening and running the application.
 
@@ -17,7 +16,6 @@ into eclipse or your favorite IDE. This can be easily done by downloading the Gi
 - To run this application you will need to go to the AddressBook2Application.java file that is located in the src/main/java file under the CFMProject.AddressBook2 package. Once located, you will need to click the run button at the top of the screen. (This application contains a spring boot framework, so please ensure your IDE can process this type of application.)
 
 - You will then need to type or copy and paste the following ip address into your browser: http://www.localhost:27016/Contact/login
-![AppLink](http://www.localhost:27016/Contact/login)
 
 **Utilizing the Application Once It's Running**
 
