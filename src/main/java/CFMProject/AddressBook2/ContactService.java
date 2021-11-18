@@ -36,7 +36,9 @@ public class ContactService {
 	 * @param contact
 	 */
 	public void savecontact(Contact contact) {
-		this.repository.save(contact);
+		if(contact.fname.length() < 15 && contact.lname.length() < 15 ) {
+			repository.save(contact);
+		}
 	}
 	
 	//add a new Contact to the list
@@ -44,7 +46,9 @@ public class ContactService {
 	 * @param contact
 	 */
 	public void add(Contact contact) {
+		if(contact.fname.length() < 15 && contact.lname.length() < 15 ) {
 		repository.save(contact);
+		}
 	}
 	
 	//Delete a Contact from the list
