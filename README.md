@@ -1,5 +1,3 @@
-//put this on GITHUB
-
 Welcome to the AddressBook dynamic web application created by Joeseph Sande!
 
 -The first step to getting this application running on your system is to first import the project
