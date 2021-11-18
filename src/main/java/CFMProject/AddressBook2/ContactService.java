@@ -66,19 +66,18 @@ public class ContactService {
 		{
 			return repository.findById(id);
 		}
-		
 		return null;
 	}
 
 	/**
-	 * @param id
+	 * @param id to find the contact by their id regarding update, delete and details buttons
 	 */
 	public void getContactById(String id) {
 		repository.findById(id);
 	}
 	
-	//@SuppressWarnings("depreciation")
-	/**
+	
+	/** Save the contact after updates were made
 	 * @param contact
 	 * @throws AttributeNotFoundException
 	 */
@@ -86,7 +85,7 @@ public class ContactService {
 		repository.save(contact);
 	}
 
-	/**
+	/** Saving a contact with updated parameters
 	 * @param id
 	 * @param fname
 	 * @param lname
@@ -133,8 +132,8 @@ public class ContactService {
 	}
 
 	/**
-	 * @param keyword
-	 * @return
+	 * @param keyword as the string to search for
+	 * @return either the contact with the name matching keyword or all of the contacts if nothing was found
 	 */
 	public List<Contact> findByName(String keyword) {
 		if(keyword != null) {
