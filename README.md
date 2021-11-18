@@ -1,7 +1,11 @@
 # Address Book
+
 <hr>
+
 **Welcome to the AddressBook dynamic web application developed by Joeseph Sande!**
+
 <hr>
+
 -The first step to getting this application running on your system is to first import the project
 into eclipse or your favorite IDE. You will need the web application tools plug in for eclipse.
 
