@@ -29,8 +29,9 @@ into eclipse or your favorite IDE. This can be easily done by downloading the Gi
 
 **Utilizing the Application Once It's Running**
 
-- You must properly login with the following to see all the 
-contacts on the main screen- Username: admin  Password: admin  
+- You must properly login with the following to see all the contacts on the main screen- Username: admin  Password: admin  
+![MainScreen](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/Features.png)
+
 
 - To add a contact, please click the Add Contact button and follow the 
 prompts on the next screen to fill out a new contact form or press the go back button to 
