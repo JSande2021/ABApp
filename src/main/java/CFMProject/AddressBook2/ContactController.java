@@ -48,7 +48,6 @@ public class ContactController {
 		int attempts = 0;
 		if ("admin".equals(username) && "admin".equals(password)) {
 			model.addAttribute("Contact", contactService.findAll());
-			
 			return "Contact";
 		} else {
 			model.addAttribute("invalidCredentials", true);
@@ -177,7 +176,6 @@ public class ContactController {
 	@RequestMapping(value = "/Contact/search", method= RequestMethod.GET)
 	public String search(@Param("keyword") String keyword, Contact contact, Model model) {
 		List<Contact> contacts = contactService.findByName(keyword);
-		//Optional<Contact> contacts = contactService.addByfName(keyword);
 		try{model.addAttribute("contacts", contacts);
 		model.addAttribute("keyword", contactService.findByName(keyword));
 		} catch(Exception x) {
