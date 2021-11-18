@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.6</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>CFMProject</groupId>
+	<artifactId>AddressBook2</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>AddressBook2</name>
+	<description>Address Book Application</description>
+	<repositories>
+		
+	</repositories>
+	<properties>
+		<java.version>11</java.version>
+		<!-- SPRING SECURITY VERSIONS -->
+		<spring-security.version>5.3.4.RELEASE</spring-security.version>
+    	<spring.version>5.2.8.RELEASE</spring.version>
+	</properties>
+	<dependencies>
+
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
+		</dependency> 
+		
+
+		<dependency> 
+			<groupId>org.mongodb</groupId> 
+			<artifactId>mongodb-driver-sync</artifactId> 
+			<version>4.2.3</version><!--$NO-MVN-MAN-VER$--> 
+		</dependency> 	
+
+<!-- Security -->
+		<!--<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>-->
+<!-- Lombook -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version><!--$NO-MVN-MAN-VER$-->
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-starter-thymeleaf</artifactId>
+    		<version>2.5.6</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+	 	 <dependency> 
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

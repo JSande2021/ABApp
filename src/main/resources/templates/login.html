@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- @Author Joeseph Sande -->
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Login Screen</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/ABstyle.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/button.css}" />
+</head>
+<body style="background-color: #3F4045">
+	<h1 align="center" style="color: white">Sign In</h1>
+	<hr/>
+	<br>
+	<br>
+	<form th:action="@{/login}" th:object="${loginForm}" method="post">
+		<h2 align="center" th:if="${invalidCredentials}" class="error" style="color: red">Invalid
+			Credentials</h2>
+		<h2 align="center">
+			<input type="text" placeholder="Username" size="50" id="username" name="username" />
+		</h2>
+		<h2 align="center">
+			<input type="text" placeholder="Password" size="50" id="password" name="password" />
+		</h2>
+
+		<br />
+		<div th:if="${param.error}">
+			<p class="text-danger">[[${session.SPRING_SECURITY_LAST_EXCEPTION.message}]]</p>
+		</div>
+		<p align="center">
+			<button type="submit" class="glow-on-hover">Log In</button>
+		</p>
+	</form>
+	<form th:action="@{/NewUser}" th:object="${User}" method="post">
+	<p align="center">
+		<button type="submit" class="glow-on-hover">New User</button>
+	</p>
+	</form>
+</body>
+</html>

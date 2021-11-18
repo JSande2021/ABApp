@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- @Author Joeseph Sande -->
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>New User</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" -->
+<link rel="stylesheet" type="text/css" th:href="@{/assets/css/ABstyle.css}" />
+<link rel="stylesheet" type="text/css" th:href="@{/assets/css/button.css}" />
+</head>
+<body style="background-color: #3F4045">
+	<form action="#" th:action="@{/User}" th:method="get">
+		<input type="hidden" name="_method" value="edit" />
+		<button type="submit" style="border-radius: 50px" id="submitButton"
+			class="glow-on-hover">Back</button>
+	</form>
+
+	<div class="container" align="center">
+
+		<h1 align="center" style="color: white">User Management System</h1>
+		<hr>
+		<h2 align="center" style="color: white">Create New User</h2>
+
+		<form action="#" th:action="@{/User/saveUser}" th:object="${User}"
+			method="POST">
+
+			<input type="text" th:field="*{fname}" placeholder="First Name"
+				class="form-control mb-4"> 
+			<input type="text" th:field="*{lname}" placeholder="Last Name"
+				class="form-control mb-4"> 
+			<input type="text" th:field="*{phoneNumber}" placeholder="Phone Number"
+				class="form-control mb-4"> 
+			<input type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4">
+			<input type="text" th:field="*{username}" placeholder="Username"
+				class="form-control mb-4"> 
+			<input type="text" th:field="*{password}" placeholder="Password"
+				class="form-control mb-4">
+			<button type="submit" class="glow-on-hover">Save</button>
+		</form>
+	</div>
+</body>
+</html>

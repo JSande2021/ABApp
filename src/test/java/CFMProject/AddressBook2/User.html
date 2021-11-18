@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- @Author Joeseph Sande -->
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Details</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/ABstyle.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/button.css}" />
+</head>
+<body style="background-color: #3F4045">
+
+	<form action="#" th:action="@{/User}" th:method="get">
+		<input type="hidden" name="_method" value="edit" />
+		<button type="submit" style="border-radius: 50px" id="submitButton"
+			class="glow-on-hover">Back</button>
+	</form>
+
+	<h1 align="center" style="color: white">User Details</h1>
+
+	<br>
+
+	<table class="table table-dark">
+		<thead>
+			<tr>
+				<th scope="col">First Name</th>
+				<th scope="col">Last Name</th>
+				<th scope="col">Phone Number</th>
+				<th scope="col">Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td th:hidden="${User.id}"></td>
+				<td th:hidden="${User.username}">username</td>
+				<td th:hidden="${User.password}">password</td>
+				<td th:text="${User.fname}">fname</td>
+				<td th:text="${User.lname}">lname</td>
+				<td th:text="${User.phonenumber}">phonenumber</td>
+				<td th:text="${Contact.email}">email</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

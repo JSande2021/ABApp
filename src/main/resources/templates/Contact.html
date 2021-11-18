@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- @Author Joeseph Sande -->
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Address Book</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+<!-- integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/ABstyle.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/button.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/formMain.css}" />
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/delete.css}" />
+<script src=”js/datatables/datatables.js”></script>
+</head>
+<body style="background-color: #3F4045">
+	<br>
+	
+	<h5 align="right">
+	<form action="#" th:action="@{/Contact/login}" th:method="get">
+			<input type="hidden" name="_method" value="edit" />
+			<button type="submit" id="submitButton" class="glow-on-hover">Log Out</button>
+	</form>
+	</h5>
+
+	<h2 align="center" style="color: white">
+		<form action="#" th:action="@{/Contact/showNewContactForm}" th:method="get">
+			<input type="hidden" name="_method" value="edit" />
+			<button type="submit" id="submitButton" class="glow-on-hover">Add</button>
+		</form>
+		Address Book
+		<form action="#" th:action="@{/Contact/displayAll}" th:method="get">
+			<input type="hidden" name="_method" value="edit" />
+			<button type="submit" id="submitButton" class="glow-on-hover">All</button>
+		</form>
+	</h2>
+	
+	<h3 align="center">
+	<form action="#" th:action="@{/Contact/search}" method="get">
+	&nbsp;
+  	<input type="text" name="keyword" th:value="${keyword}" required placeholder="Find by Contact First or Last Name" size="50" >
+  	&nbsp;
+  	<button type="submit" th:value="keyword" class="glow-on-hover" >Search</button>
+  	</form>
+	</h3>
+	<br>
+
+	<div class="datatable" align="center">
+		
+		
+		<!-- Table containing all Contact information for all Contacts in the Address Book -->
+		<table class="table table-dark">
+			<thead>
+				<tr>
+					<th scope="col">Edit</th>
+					<th scope="col">Details</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="Contact: ${Contact}">
+
+					<td>
+						<form action="#" th:action="@{/edit/{id}(id=${Contact.id})}"
+							th:method="get">
+							<input type="hidden" name="_method" value="edit" />
+							<button type="submit" id="submitButton" class="glow-on-hover">Edit</button>
+						</form>
+					</td>
+					<td>
+						<form action="#" th:action="@{/details/{id}(id=${Contact.id})}"
+							th:method="get">
+							<input type="hidden" name="_method" value="details" />
+							<button type="submit" id="submitButton" class="glow-on-hover">Details</button>
+						</form>
+					</td>
+					<td th:text="${Contact.fname}">fname</td>
+					<td th:text="${Contact.lname}">lname</td>
+					<td>
+						<form action="#" th:action="@{/{id}(id=${Contact.id})}"
+							th:method="post">
+							<input type="hidden" name="_method" value="delete" />
+							<button type="submit" id="submitButton" class="delete">Delete</button>
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
