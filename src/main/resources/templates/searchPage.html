@@ -47,22 +47,22 @@
 			<tbody>
 				<tr th:each="keyword: ${keyword}">
 
-					<td>
+					<td class="overflow">
 						<form action="#" th:action="@{/edit/{id}(id=${keyword.id})}"
 							th:method="get">
 							<input type="hidden" name="_method" value="edit" />
 							<button type="submit" id="submitButton" class="glow-on-hover">Edit</button>
 						</form>
 					</td>
-					<td>
+					<td class="overflow">
 						<form action="#" th:action="@{/details/{id}(id=${keyword.id})}"
 							th:method="get">
 							<input type="hidden" name="_method" value="details" />
 							<button type="submit" id="submitButton" class="glow-on-hover">Details</button>
 						</form>
 					</td>
-					<td th:text="${keyword.fname}">fname</td>
-					<td th:text="${keyword.lname}">lname</td>
+					<td th:text="${keyword.fname}" class="overflow">fname</td>
+					<td th:text="${keyword.lname}" class="overflow">lname</td>
 					<td>
 						<form action="#" th:action="@{/{id}(id=${keyword.id})}"
 							th:method="post">
