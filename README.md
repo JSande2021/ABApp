@@ -51,7 +51,7 @@ the search button to receive the results.
 
 ![Search](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/searchButton.png)
 
-![SearchName](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/searchButton.png)
+![SearchName](https://github.com/JSande2021/AddressBook2/blob/master/InstructionScreenShots/SearchRowe.png)
 
 - The back button on any of the features pages will take you back to the home page.
 
